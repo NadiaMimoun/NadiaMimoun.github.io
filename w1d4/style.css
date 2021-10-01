@@ -33,14 +33,17 @@ h2 {
   flex: 10%;
   background-color: #808080;
   padding: 90px;
+  text-align: center;
 }
 .div2 {
-  flex: 10%;
+  flex: 30%;
   background-color: #c0c0c0;
   padding: 90px;
+  text-align: center;
 }
 .div3 {
   flex: 10%;
   background-color: #e5e4e2;
   padding: 90px;
+  text-align: center;
 }
