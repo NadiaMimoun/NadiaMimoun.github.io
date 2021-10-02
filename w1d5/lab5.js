@@ -83,7 +83,7 @@ function myFunctionTest(expected, found) {
         return newstr;
       }
       console.log("Expected output of reverse(hello) is olleh  " + myFunctionTest("olleh",reverse("hello")));
-      console.log("Expected output of reverse([1,2,3,4]) is olleh   " + myFunctionTest("hello",reverse("hello")));
+      console.log("Expected output of reverse(hello) is olleh   " + myFunctionTest("hello",reverse("hello")));
  
 //function findLongestWord():
       function findLongestWord(a) {
