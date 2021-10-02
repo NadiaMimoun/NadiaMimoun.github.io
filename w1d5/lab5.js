@@ -95,8 +95,8 @@ function myFunctionTest(expected, found) {
         }
         return long + 1;
       }
-      console.log("Expected output of findLongestWord([hello,hi,now]) is 5  " + myFunctionTest(6,findLongestWord(["hello","hi","now"])));
-      console.log("Expected output of findLongestWord([hello,hi,now]) is 5  " + myFunctionTest(4,findLongestWord(["hello","hi","now"])));
+      console.log("Expected output of findLongestWord([hello,hi,now]) is 6  " + myFunctionTest(6,findLongestWord(["hello","hi","now"])));
+      console.log("Expected output of findLongestWord([hello,hi,now]) is 6  " + myFunctionTest(4,findLongestWord(["hello","hi","now"])));
  
 //function filterLongWords():     
       function filterLongWords(a, j) {
