@@ -28,6 +28,7 @@ h2 {
 .row {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 .div1 {
   flex: 10%;
