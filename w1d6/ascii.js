@@ -665,25 +665,10 @@ function startButton(){
     document.getElementById("start").disabled = true;
    document.getElementById("stop").disabled = false; 
   
-   animation(250);
+  
 
 }
-var speed;
-function animation(speed){
-    var x= document.getElementById("selectAnimation").value
-    var frame="";
-    var arrayOfFrames=ANIMATIONS[x.toUpperCase()].split('=====')
-    var k=0
-    frame=arrayOfFrames[k];
-    timer = window.setInterval(function(){
 
-        k=k == arrayOfFrames.length?0:k;
-        frame=arrayOfFrames[k];
-        document.getElementById('idanimation').innerHTML = frame;
-        k++;
-
-    }, speed);
-}
 function stopButton(){
   
    document.getElementById("stop").disabled=true;
