@@ -109,7 +109,18 @@ function myFunctionTest(expected, found) {
         return tab;
       }
       console.log("Expected output of filterLongWords([hello,hi,now]) is hello  " + myFunctionTest(" hello",filterLongWords(["hello","hi","now"],4)));
-     
+  //shortest
+  function shortest(s1,s2,s3){
+    if(s1.length<s2.length && s1.length<s3.length){
+      return s1;
+    }
+    if(s2.length<s1.length && s2.length<s3.length){
+      return s2;
+    }
+    if(s3.length<s1.length && s3.length<s2.length){
+      return s2;
+    }
+  }   
      
  
       
