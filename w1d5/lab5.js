@@ -55,33 +55,47 @@ function myFunctionTest(expected, found) {
 //function sum():        
 
       function sum(a) {
-        var sum=0 ;
-        for (var i=0;i<a.length;i++) {
-          sum += a[i];
-        }
-        return sum;
+        const count = a.reduce((preval,a) => preval + a, 0)
+        return count;
+        
+
       }
+      document.writeln(sum([5,5,5,5])+"<br/>");
+      
       console.log("Expected output of sum([1,2,3,4]) is 10  " + myFunctionTest(10,sum([1,2,3,4])));
       console.log("Expected output of sum([1,2,3,4]) is 9  " + myFunctionTest(4,sum([1,2,3,4])));
 
 //function multiply():       
       function multiply(a) {
-        var mul = 1;
-        for (var i in a) {
-          mul *= a[i];
-        }
-        return mul;
+        const count = a.reduce((preval,a) => preval * a, 1)
+        return count;
+        
       }
+      document.writeln(multiply([5,5,5,5])+"<br/>");
       console.log("Expected output of multiply([1,2,3,4]) is 24  " + myFunctionTest(24,multiply([1,2,3,4])));
       console.log("Expected output of multiply([1,2,3,4]) is 9  " + myFunctionTest(4,multiply([1,2,3,4])));
- //function reverse():       
-      function reverse(str) {
+ //function reverse():  
+ function reverse(str)  {
         var newstr = "";
         for (var i = str.length - 1; i >= 0; i--) {
-          newstr += str[i];
+         newstr += str[i];
         }
-        return newstr;
+       return newstr;
+       
       }
+      function reverseString(s) {
+        var reverseArray = s.split("").reverse(); 
+        var joinArray = reverseArray.join(""); 
+        return joinArray; 
+    }
+      const s="nadia";
+      const arr1=s.split();
+      const a2 = arr1.map(function(s) {
+        return reverseString(s);
+      });
+      document.writeln("a2: " + a2+"<br/>");
+
+    
       console.log("Expected output of reverse(hello) is olleh  " + myFunctionTest("olleh",reverse("hello")));
       console.log("Expected output of reverse(hello) is olleh   " + myFunctionTest("hello",reverse("hello")));
  
@@ -100,14 +114,18 @@ function myFunctionTest(expected, found) {
  
 //function filterLongWords():     
       function filterLongWords(a, j) {
-        var tab = [];
+        /*var tab = [];
         for (var i = 0; i < a.length; i++) {
           if (a[i].length > j) {
             tab += " " + a[i];
           }
         }
-        return tab;
+        return tab;*/
+        
+        var tab1=a.filter(function(s) {return s.length > j });
+        return tab1;
       }
+      document.writeln(filterLongWords(["nadia","ank","kjiu"], 3)+"<br/>");
       console.log("Expected output of filterLongWords([hello,hi,now]) is hello  " + myFunctionTest(" hello",filterLongWords(["hello","hi","now"],4)));
   //shortest
   function shortest(s1,s2,s3){
