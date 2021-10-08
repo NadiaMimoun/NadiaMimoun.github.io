@@ -1,0 +1,12 @@
+
+      describe("filter", function () {
+        it("", function () {
+          assert.equal('b c d ', "a b c d".filter("a"));
+        });
+      });
+      describe("BubbleSort", function () {
+        it("", function () {
+          assert.deepEqual([-2, 1, 9],[1, 9, -2].BubbleSort());
+        });
+      });
+   
