@@ -36,4 +36,59 @@ function bar(){
 }
 bar();*/
 
+let CAR= (function(){
+    let speed=0;
+    let direction=0;
+    return{
+        gasPaddle:function(){
+            if(speed+5>120){
+                speed=120;
+            }
+            else{
+                speed=speed+5;
+            }
+        },
+        break:function(){
+            if(speed-10<0){
+                speed=0;
+            }
+            else{
+                speed=speed-10;
+            }
+        },
+        turnLeft:function(degree){
+            direction-=degree;
+        },
+        turnRight:function(degree){
+            direction+=degree;
+        },
+        status:function(){
+            console.log("The car is driving direction " + direction + " at " + speed + "mph"
+            )
+        }
+    }
+})();
 
+
+function computer(ram,cpu,storage){
+    this.ram=ram;
+    this.cpu=cpu;
+    this.storage=storage;
+
+}
+computer.prototype.runProgram=function(program){
+    console.log( "running: " + program);
+
+};
+function Laptop(ram,cpu,storage,battery){
+    this.ram=ram;
+    this.cpu=cpu;
+    this.storage=storage;
+    this.battery=battery;
+
+}
+Laptop.__proto__=computer.prototype;
+Laptop.prototype.carryAround=function(){
+    console.log( "carrying laptop:  cpu" + this.cpu +" ram: " + this.ram + " storage: " + this.storage + " battery: " + this.battery);
+
+};
