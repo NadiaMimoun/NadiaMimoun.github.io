@@ -1,3 +1,5 @@
+"use strict"
+
 $(document).ready(function(){
 
 var start=false;
@@ -5,7 +7,7 @@ var start=false;
     $("#start").click(function(){
         start=true;
         $("#status").text('You still wining !');
-        $(".boundary").mousemove(function(){ lose(); })
+        $(".boundary").mousemove(function(){ lose(); });
         if($('.boundary').hasClass('youlose')){
             $('.boundary').removeClass('youlose');
         }
@@ -34,4 +36,4 @@ var start=false;
 
 
     
-})
+});
